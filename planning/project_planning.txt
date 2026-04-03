@@ -1,0 +1,52 @@
+PROJECT PLANNING:
+
+PY Files:
+0) main.py
+    - Coordinates all  the files together.
+1) course.py
+    - Contains the Course class: represents a class/subject with an enrolled 
+    student list. Attributes: course name, teacher name, year, a list of Student 
+    objects. Methods: enroll(student), remove_student(student_id), 
+    class_average() --> calculates the mean of all students averages, 
+    top_student(n=3) that returns the 3 highest performing students, 
+    failing_students() --> returns students with less than 10/20 average,
+    __len__ --> returns student count.
+2) exceptions.py
+    -Writes custom exceptions for every class.
+3) grade.py
+    - Contains the Grade class: represents a single graded assesment. 
+    Attributes: subject_name, score (0-20), coefficient, date, assesment_type
+    (exam/coursework/oral). Methods: weighted_score --> returns score multiplied
+    by coefficient, is_passing() --> returns True if score >= 10, __str__,
+    __repr__ .
+4) school.py
+    - Contains School class: the top level container. Attributes: school name,
+    dictionnary of Course objects keyed by course name. Methods: add_course(),
+    remove_course(), find_student_accross_all_courses(name) --> Searches for
+    name accross all courses, overall_statistics() --> print school wide performance
+    data, save_to_json(), load_to_json().
+5) student.py
+    - Contains Student class: contains a students info. Attributes: name, Student id,
+    (generated using a class variable counter that increments with each new student),
+    year level, list of Grade objects (starting empty). Methods: 
+    add_grade(grade) --> appends a Grade object, calculate_average() --> computes
+    the weighted average accross all grades, get_grades_by_subject(subject) --> filters
+    and returns grades for one subject, subject_average(subject) --> calculates
+    the average for one subject, best_subject() --> returns highest average,
+    worst_average() --> returns lowest average, generate_report() --> prints 
+    a complete academic report card, to_dict() --> converts to dictionary for 
+    future json serialisation, __str__, __repr__, __len__ .
+
+PRESENTATION Files:
+1) .gitignore
+    - Contains all the files that will be ignired by the github repo.
+2) LICENSE
+    - Contains the GNU v3 License for the Github Repo.
+3) README.md
+    - Contains the project description for github users.
+
+SAVING Files:
+1) school.json
+    - where the data will be saved (for me).
+1) school_example.json
+    - where the data will be saved for github users seeing the repo.
