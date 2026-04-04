@@ -14,29 +14,30 @@ METHODS:
     - is_passing() --> returns True if score >= 10
     - __str__
 """
+
+#Imports the custom exception for score:
+from exceptions import InvalidScoreError
+
 #Creates the Grade class:
 class Grade():
 
     #ATTRIBUTES:
-    def __init__(self, subject_name, score, coefficient, date, assesment_type):
+    def __init__(self, subject_name, score, coefficient, date, assessment_type):
+        #Raises custom exception if score is invalid:
+        if not 0 <= score <= 20:
+            raise InvalidScoreError("Score must be between 0 and 20.")
         self.subject_name = subject_name
         self.score = score
         self.coefficient = coefficient
         self.date = date
-        self.assesment_type = assesment_type
+        self.assessment_type = assessment_type
 
     #METHODS:
     def weighted_score(self):
         return self.score*self.coefficient
-    
+
     def is_passing(self):
-        if self.score >= 10:
-            return True
-        else:
-            return False
-        
+        return self.score >= 10
+  
     def __str__(self):
-        return (f"{self.subject_name}, {self.score}, {self.coefficient}, {self.date}, {self.assesment_type}")
-        
-        
-    
+        return f"{self.subject_name} | Score: {self.score} | Coeff: {self.coefficient} | Date: {self.date} |Type: {self.assessment_type}"
