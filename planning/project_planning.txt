@@ -17,7 +17,7 @@ PY Files:
     - Contains the Grade class: represents a single graded assesment. 
     Attributes: subject_name, score (0-20), coefficient, date, assesment_type
     (exam/coursework/oral). Methods: weighted_score --> returns score multiplied
-    by coefficient, is_passing() --> returns True if score >= 10, __str__,
+    by coefficientRRet, is_passing() --> returns True if score >= 10, __str__,
     __repr__ .
 4) school.py
     - Contains School class: the top level container. Attributes: school name,
