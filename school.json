@@ -1,0 +1,17 @@
+{
+    "name": "Greenwood High",
+    "courses": {
+        "Mathematics": {
+            "teacher": "Mr. Newton",
+            "year": "2026",
+            "students": [
+                {
+                    "name": "Alice Johnson",
+                    "id": 1,
+                    "year_level": "9th Grade",
+                    "grades": [
+                        {
+                            "subject_name": "Mathematics",
+                            "score": 15,
+                            "coefficient": 2,
+                            "date": 
